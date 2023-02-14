@@ -10,7 +10,7 @@ import RootLayout from "./RootLayout";
 import HelpLayout from "./HelpLayout";
 import CareersLayout from "./CareersLayout";
 import Faq from "./Faq";
-import Contact from "./Contact";
+import Contact, { contactAction } from "./Contact";
 import NotFound from "./NotFound";
 import Careers, { careersLoader } from "./Careers";
 import CareerDetails, { careerDetailsLoader } from "./CareerDetails";
@@ -23,7 +23,7 @@ const router = createBrowserRouter(
       <Route path="about" element={<About />} />
       <Route path="help" element={<HelpLayout />}>
         <Route path="faq" element={<Faq />} />
-        <Route path="contact" element={<Contact />} />
+        <Route path="contact" element={<Contact />} action={contactAction} />
       </Route>
 
       <Route
